@@ -6,7 +6,8 @@ import reportWebVitals from './reportWebVitals';
 class FileUploadButton extends Component {
   handleFileUpload = event => {
     // console.log(event.target.files[0].name);
-    console.log(`Selected file - ${event.target.files[0].name}`);
+    // console.log(`Selected file - ${event.target.files[0].name}`);
+    document.getElementById("data").innerHTML=`Selected file - ${event.target.files[0].name}`
   };
 
   render() {
@@ -21,6 +22,7 @@ class FileUploadButton extends Component {
         />
         <h1>Upload file </h1>
         <button onClick={() => this.refs.fileInput.click()}>Upload File</button>
+        <p id ="data"></p>
       </React.Fragment>
     );
   }
