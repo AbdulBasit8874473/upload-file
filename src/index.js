@@ -7,6 +7,7 @@ class FileUploadButton extends Component {
   handleFileUpload = event => {
     // console.log(event.target.files[0].name);
     // console.log(`Selected file - ${event.target.files[0].name}`);
+    if (event.target.files[0].name)
     document.getElementById("data").innerHTML=`Selected file - ${event.target.files[0].name}`
   };
 
